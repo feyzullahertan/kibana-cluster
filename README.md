@@ -1,4 +1,4 @@
-# Elasticsearch with Kibana
+# Kibana with Fleet Manager
 [![](https://img.shields.io/badge/Documantation-1.0-brightgreen)]()
 
 <img src="https://user-images.githubusercontent.com/37136204/150631954-fc532e29-834a-41a2-a137-c6da8bb015bc.png" width="700" height="300">
