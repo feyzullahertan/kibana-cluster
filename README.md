@@ -44,6 +44,7 @@ Requirements before creating VM Instance
 
 ### Configuration
 
+First we'll do some changes at kibana.yml
 ```bash
   cd /etc/kibana/
   nano kibana.yml
@@ -55,6 +56,29 @@ You can see everthing is comment mode. We need to delete "#" and configuration s
   server.host: "0.0.0.0" / You can write external IP.
   elasticsearch.host: ["http://localhost:9200"]
 ```
+
+Secondly, we'll do some changes at elasticsearch.yml
+```bash
+  cd /etc/kibana/
+  nano kibana.yml
+```
+Just add basic security parameters.
+```bash
+  cd /etc/kibana/
+  nano kibana.yml
+```
+```bash
+  xpack.security.enabled : true
+  xpack.security.authc.api_key.enabled : true
+```
+### Manage Username-Passwords
+
+This is important step. Because we neen have username&password for accessing kibana dashboards or using fleet manager.
+```bash
+  cd /usr/share/elasticsearch/
+  ./bin/elasticsearch-setup-passwords auto
+```
+Save your login settings :)
 
 ### Starting Kibana
 
